@@ -1,0 +1,36 @@
+/* scrroll de categoria */
+.scrollable-nav {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.scrollable-nav .nav-item {
+    display: inline-block;
+}
+
+
+/*scroll de productos */
+.product-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+
+ /* Media queries para tablet y celulares */
+ @media (max-width: 992px) {  /* Considerando que 992px es el límite de Bootstrap para dispositivos medianos */
+    .product-card {
+        max-width: 200px;
+        margin: 0 auto;  /* Centrar las tarjetas si su ancho es menor al contenedor */
+    }
+}
