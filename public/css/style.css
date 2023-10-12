@@ -4,6 +4,9 @@ body {
     background-color: #f4f4f4; /* Un gris muy claro */
     
 }
+.bg-withe {
+    background-color: white;
+}
 .navbar.bg-body-tertiary, header {
     background-color: #df7eb2 !important; /* Color rosa de fondo */
     color: white; /* Letras blancas */
