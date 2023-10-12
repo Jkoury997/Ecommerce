@@ -4,6 +4,70 @@ body {
     background-color: #f4f4f4; /* Un gris muy claro */
     
 }
+.navbar.bg-body-tertiary, header {
+    background-color: #df7eb2 !important; /* Color rosa de fondo */
+    color: white; /* Letras blancas */
+}
+.c-white{
+    color: white !important;
+}
+.navbar.bg-body-tertiary .bi {
+    color: white !important;
+}
+.navbar.bg-body-tertiary .cart {
+    background-color: white !important; /* Color rosa de fondo para el número */
+    color: #df7eb2 !important; /* Color rosa de fondo para el número */
+}
+.badge-new{
+    background-color: #df7eb2;
+    color: white;
+}
+.navbar-toggler-icon {
+    filter: invert(100%); /* Esto cambiará el ícono a blanco */
+}
+.navbar.bg-body-tertiary .btn-light {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.buttom-hambuguer {
+    color: white;
+    border: none;
+
+}
+
+hr {
+    border: none; /* Elimina el borde por defecto */
+    height: 2px; /* Define el grosor de la línea */
+    background-color: #b3b3b3; /* Le da un color rosa a la línea */
+    margin: 20px 0; /* Añade un margen arriba y abajo de la línea */
+}
+/* Buttom */
+
+.btn-pink {
+    color: white;
+    border: none;
+    background-color: #df7eb2 !important; /* Color rosa de fondo */
+
+}
+
+.btn-pink-line{
+    color: #df7eb2;
+    border: #df7eb2;
+    border: 1px solid;
+}
+
+
+.btn-pink:hover, .btn-pink-line:hover{
+    background-color: #e068a8 !important;
+    border: #e068a8;
+}
+
+
+
+
+
+
 /* scrroll de categoria */
 .scrollable-menu {
     display: flex;
@@ -14,6 +78,10 @@ body {
 }
 
 .menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Asegura que los elementos estén uno debajo del otro */
     flex: none;
     margin-right: 10px;
 }
@@ -21,34 +89,43 @@ body {
 .menu-item a {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centrar horizontalmente */
+    align-items: center;
     text-align: center;
+    width: 100%;
+    justify-content: center; /* Centrar verticalmente */
+    height: 100%;
 }
-
 .item-logo {
     display: block;
     width: 60px;
     height: 60px;
     border-radius: 50%;
     margin-bottom: 5px;
+    align-self: center; /* Asegura que el logo esté centrado en su contenedor */
 }
 
 .logo-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 70px; /* Ajusta según necesites */
-    width: 70px; /* Ajusta según necesites */
+    height: 70px;
+    width: 70px;
 }
+.menu-item .nav-link {
+    padding: 0;
+}
+.logo-wrapper, .item-text {
+    height: auto;
+}
+
 
 /* ... tus otros estilos ... */
 
 .item-text {
     color: #757575; /* Gris medio */
+    text-align: center;
 }
-.menu-item {
-    text-decoration: underline;
-}
+
 
 .menu-item a:hover .item-text {
 
@@ -59,6 +136,14 @@ body {
 .menu-item a:hover .item-text {
     opacity: 0.8; /* Disminuir la opacidad al hacer hover */
 }
+.menu-item a:hover {
+    text-decoration: none; /* Asegurarse de que no hay subrayado al hacer hover */
+}
+
+.menu-item a:focus {
+    outline: none;
+}
+
 
 
 
@@ -118,5 +203,29 @@ body {
     .titulo-destacados {
         font-size: 24px;
         margin-bottom: 15px;
+    }
+}
+
+/* Estilo para pantallas grandes */
+@media (min-width: 992px) {
+    .menu-item {
+        /* Ajusta el padding o margin como desees */
+        padding: 15px 0; 
+    }
+
+    .item-logo {
+        /* Aumenta el tamaño del logo */
+        width: 80px;
+        height: 80px;
+    }
+
+    .item-text {
+        /* Aumenta el tamaño del texto de la categoría si lo deseas */
+        font-size: 1.2em;
+    }
+    .custom-banner img {
+        width: 100%; /* Ajusta este valor según tus preferencias */
+        max-width: 900px; /* Puedes establecer un ancho máximo si lo prefieres */
+        max-height: 900px;
     }
 }
