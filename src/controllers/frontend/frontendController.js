@@ -1,3 +1,5 @@
+const authService = require("../../services/authService")
+
 module.exports = {
     home: (req, res) => {
       res.render("frontend/home")
@@ -29,7 +31,8 @@ module.exports = {
       });
     },
     register: (req, res) => {
-      console.log(req.body)
-      res.render("frontend/auth/register")
+      authService.createUser(req.body).then((user) => {
+        res.redirect("/home")
+      })
     },
   };

@@ -21,7 +21,7 @@ router.post("/login",validatorAuth.login,validatiorForm.login,frontendController
 
 // Register Minorista
 router.get('/register',frontendController.showRegister)
-router.post("/register",validatorAuth.login,validatiorForm.login,frontendController.register)
+router.post("/register",validatorAuth.register,validatiorForm.register,frontendController.register)
 
 
 module.exports = router
